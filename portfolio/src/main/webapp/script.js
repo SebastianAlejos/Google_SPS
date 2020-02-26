@@ -26,3 +26,21 @@ function addRandomFacts() {
   const factContainer = document.getElementById('fact-container');
   factContainer.innerText = fact;
 }
+function getData() {
+  console.log('Fetching Data URL');
+  const responsePromise = fetch('/data');
+  responsePromise.then(handleResponse);
+}
+
+function handleResponse(response) {
+  console.log('Handling the response.');
+  const textPromise = response.text();
+  textPromise.then(addTextToDom);
+}
+
+/** Adds a random quote to the DOM. */
+function addTextToDom(text) {
+  console.log('Adding text to dom: ');
+  const quoteContainer = document.getElementById('text-container');
+  quoteContainer.innerText = text;
+}
