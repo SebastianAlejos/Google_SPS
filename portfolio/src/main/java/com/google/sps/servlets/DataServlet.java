@@ -25,13 +25,9 @@ import java.util.ArrayList;
 /** Servlet that returns some example content. TODO: modify this file to handle comments data */
 @WebServlet("/data")
 public class DataServlet extends HttpServlet {
-
+     ArrayList<String> comments= new ArrayList<String>();
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    ArrayList<String> comments= new ArrayList<String>();
-    comments.add("This is my data servlet");
-    comments.add("I am learning to develope server-side");
-    comments.add("Im enjoying SPS");
     String json = convertToJson(comments);
     response.setContentType("application/json;");
     response.getWriter().println(json);
@@ -40,5 +36,16 @@ public class DataServlet extends HttpServlet {
     Gson gson = new Gson();
     String json = gson.toJson(comments);
     return json;
+  }
+   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    comments.add(getComment(request));
+
+    // Redirect back to the HTML page.
+    response.sendRedirect("/index.html");
+  }
+  private String getComment(HttpServletRequest request) {
+    // Get the input from the form.
+    String comment = request.getParameter("comment");
+    return comment;
   }
 }

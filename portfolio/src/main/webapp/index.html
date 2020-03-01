@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
   </head>
-  <body>
+  <body onload="getComments()">
     <div id="content">
       <h1>Sebastián Alejos Acosta</h1>
       <p>This is my portfolio.</p>
@@ -14,10 +14,6 @@
       <button onclick="addRandomFacts()">Random fact generator</button>
       <div id="fact-container"></div>
       <div id="content">
-      <h1>Server Stats</h1>
-      <p>Click here to see comments:</p>
-      <button onclick="getComments()">Fetch comments!</button>
-      <ul id="comments-container"></ul>
     </div>
       <p> I study at Tecnologico de Monterrey in Guadalajara! Welcome to my portfolio!</p>
       <p> Here is a picture of me and my dog Kyra! She is 3 months old!</p>
@@ -33,5 +29,14 @@
         <p>Instagram: @bastialejos</p>
         <p>Twitter: @bastialejos</p>
         <p> Feel free to follow, connect, etc.</p>
+
+        <form action="/data" method="POST">
+            <h3>Please leave any comments you may have:</h3>
+            <textarea name="comment">Comment here</textarea>
+      <input type="submit" />
+      <h4>Comments:</h4>
+      <ul id="comments-container"></ul>
+    </form>
   </body>
+
 </html>
