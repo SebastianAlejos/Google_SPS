@@ -26,3 +26,17 @@ function addRandomFacts() {
   const factContainer = document.getElementById('fact-container');
   factContainer.innerText = fact;
 }
+function getComments() {
+  fetch('/data').then(response => response.json()).then((comments) =>{
+      const statsListElement = document.getElementById('comments-container');
+      statsListElement.innerHTML = '';
+      for (x in comments) {
+         statsListElement.appendChild(createListElement(comments[x]));
+      }
+  });
+}
+function createListElement(text) {
+  const liElement = document.createElement('li');
+  liElement.innerText = text;
+  return liElement;
+}
