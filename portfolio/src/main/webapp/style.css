@@ -23,3 +23,8 @@
   -o-transform: rotate(90deg);
   transform: rotate(90deg);
 }
+#map {
+  border: thin solid black;
+  height: 500px;
+  width: 500px;
+}

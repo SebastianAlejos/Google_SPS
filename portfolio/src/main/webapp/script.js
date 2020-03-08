@@ -15,6 +15,10 @@
 /**
  * Adds a random facts to the page.
  */
+ function start(){
+    createMap();
+    getComments();
+}
 function addRandomFacts() {
   const facts =
       ['My dogs name is Kyra', 'I study Computer Science', 'I love playing soccer', 'Im from México', 'This is my first website ever!', 'I started coding two years ago!'];
@@ -39,4 +43,9 @@ function createListElement(text) {
   const liElement = document.createElement('li');
   liElement.innerText = text;
   return liElement;
+}
+function createMap() {
+  const map = new google.maps.Map(
+      document.getElementById('map'),
+      {center: {lat: 37.422, lng: -122.084}, zoom: 16});
 }
