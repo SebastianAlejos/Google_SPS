@@ -88,7 +88,7 @@ function createMap() {
             '</div>'+
             '<h2 id="firstHeading" class="firstHeading">Colima</h2>'+
             '<div id="bodyContent">'+
-            '<p>I lived here for 2 years while finishing highschool</p>'+
+            '<p>I lived here for 2 years while finishing highschool.</p>'+
             '</div>'+
             '</div>';
 
@@ -102,7 +102,7 @@ function createMap() {
             '</div>'+
             '<h2 id="firstHeading" class="firstHeading">Guadalajara</h2>'+
             '<div id="bodyContent">'+
-            '<p>I currently liive here while attending to college at Tec de Monterrey</p>'+
+            '<p>I currently live here while attending to college at Tec de Monterrey.</p>'+
             '</div>'+
             '</div>';
 
