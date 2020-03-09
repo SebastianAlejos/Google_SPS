@@ -55,33 +55,107 @@ function createMap() {
     mapTypeId: 'hybrid'
   });
 
-  var marker = new google.maps.Marker({
+   var strCel = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Celaya</h1>'+
+            '<div id="bodyContent">'+
+            '<p> I was born here and I lived here until I was 16 years old.</p>'+
+            '</div>'+
+            '</div>';
+
+    var infowindow = new google.maps.InfoWindow({
+        content: strCel,
+        });
+
+
+    var strLanc = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Lancaster</h1>'+
+            '<div id="bodyContent">'+
+            '<p>I lived here during my sophmore year of highschool.</p>'+
+            '</div>'+
+            '</div>';
+
+    var infowindow1 = new google.maps.InfoWindow({
+        content: strLanc,
+        });
+
+
+    var strCol = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Colima</h1>'+
+            '<div id="bodyContent">'+
+            '<p>I lived here for 2 years while finishing highschool</p>'+
+            '</div>'+
+            '</div>';
+
+    var infowindow2 = new google.maps.InfoWindow({
+        content: strCol,
+        });
+
+
+    var strGdl = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Guadalajara</h1>'+
+            '<div id="bodyContent">'+
+            '<p>I currently liive here while attending to college at Tec de Monterrey</p>'+
+            '</div>'+
+            '</div>';
+
+    var infowindow3 = new google.maps.InfoWindow({
+        content: strGdl,
+        });
+
+
+
+
+    var marker = new google.maps.Marker({
     position: celaya,
     title: 'Celaya',
     label: labels[labelIndex++ % labels.length],
     map: map
   });
+    marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
 
-  var marker1 = new google.maps.Marker({
+
+
+    var marker1 = new google.maps.Marker({
     position: lanc,
     title: 'Lancaster',
     label: labels[labelIndex++ % labels.length],
     map: map
-  });
+    });
+    marker1.addListener('click', function() {
+        infowindow1.open(map, marker1);
+    });
+
+
 
   var marker2 = new google.maps.Marker({
     position: col,
     title: 'Colima',
     label: labels[labelIndex++ % labels.length],
     map: map
-  });
+    });
+    marker2.addListener('click', function() {
+        infowindow2.open(map, marker2);  
+    });
     
-  var marker2 = new google.maps.Marker({
+  var marker3 = new google.maps.Marker({
     position: gdl,
     title: 'Guadalajara',
     label: labels[labelIndex++ % labels.length],
     map: map
-  });
+    });
+    marker3.addListener('click', function() {
+        infowindow3.open(map, marker3);  
+    });
 
 }
 
