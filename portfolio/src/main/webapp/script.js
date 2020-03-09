@@ -12,10 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-/**
- * Adds a random facts to the page.
- */
- function start(){
+var labels = '123456789';
+var labelIndex = 0;
+
+function start(){
     createMap();
     getComments();
 }
@@ -45,7 +45,44 @@ function createListElement(text) {
   return liElement;
 }
 function createMap() {
-  const map = new google.maps.Map(
-      document.getElementById('map'),
-      {center: {lat: 37.422, lng: -122.084}, zoom: 16});
+    var celaya = {lat:20.552989,  lng: -100.901004};
+    var lanc = {lat: 40.024609, lng: -76.2250707};
+    var col = {lat:19.260947, lng:  -103.702926};
+    var gdl = {lat: 20.736947, lng: -103.454616};
+    var map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: 29.974290,lng:  -94.528486},
+    zoom: 4,
+    mapTypeId: 'hybrid'
+  });
+
+  var marker = new google.maps.Marker({
+    position: celaya,
+    title: 'Celaya',
+    label: labels[labelIndex++ % labels.length],
+    map: map
+  });
+
+  var marker1 = new google.maps.Marker({
+    position: lanc,
+    title: 'Lancaster',
+    label: labels[labelIndex++ % labels.length],
+    map: map
+  });
+
+  var marker2 = new google.maps.Marker({
+    position: col,
+    title: 'Colima',
+    label: labels[labelIndex++ % labels.length],
+    map: map
+  });
+    
+  var marker2 = new google.maps.Marker({
+    position: gdl,
+    title: 'Guadalajara',
+    label: labels[labelIndex++ % labels.length],
+    map: map
+  });
+
 }
+
+
