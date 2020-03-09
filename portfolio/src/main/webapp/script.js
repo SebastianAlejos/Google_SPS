@@ -55,10 +55,10 @@ function createMap() {
     mapTypeId: 'hybrid'
   });
 
-   var strCel = '<div id="content">'+
+   var strCel = '<div id="marker">'+
             '<div id="siteNotice">'+
             '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Celaya</h1>'+
+            '<h2 id="firstHeading" class="firstHeading">Celaya</h2>'+
             '<div id="bodyContent">'+
             '<p> I was born here and I lived here until I was 16 years old.</p>'+
             '</div>'+
@@ -69,10 +69,10 @@ function createMap() {
         });
 
 
-    var strLanc = '<div id="content">'+
+    var strLanc = '<div id="marker">'+
             '<div id="siteNotice">'+
             '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Lancaster</h1>'+
+            '<h2 id="firstHeading" class="firstHeading">Lancaster</h2>'+
             '<div id="bodyContent">'+
             '<p>I lived here during my sophmore year of highschool.</p>'+
             '</div>'+
@@ -83,10 +83,10 @@ function createMap() {
         });
 
 
-    var strCol = '<div id="content">'+
+    var strCol = '<div id="marker">'+
             '<div id="siteNotice">'+
             '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Colima</h1>'+
+            '<h2 id="firstHeading" class="firstHeading">Colima</h2>'+
             '<div id="bodyContent">'+
             '<p>I lived here for 2 years while finishing highschool</p>'+
             '</div>'+
@@ -97,10 +97,10 @@ function createMap() {
         });
 
 
-    var strGdl = '<div id="content">'+
+    var strGdl = '<div id="marker">'+
             '<div id="siteNotice">'+
             '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Guadalajara</h1>'+
+            '<h2 id="firstHeading" class="firstHeading">Guadalajara</h2>'+
             '<div id="bodyContent">'+
             '<p>I currently liive here while attending to college at Tec de Monterrey</p>'+
             '</div>'+

@@ -2,6 +2,20 @@ body{
     background-image: url("images/black3.jpg");
     background-repeat: x;
 }
+h1{
+  margin-left: auto;
+  margin-right: auto;
+  width: 650px;
+  margin-top: 70px;
+  color: whitesmoke;
+}
+h2{
+    color: black
+}
+#marker{
+   color: black;
+
+}
 #content {
   margin-left: auto;
   margin-right: auto;
@@ -33,7 +47,13 @@ body{
   border: thin solid black;
   height: 500px;
   width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 70px;
+  margin-bottom: 70px;
 }
+
+
 .topnav {
   background-color: #333;
   overflow: hidden;
