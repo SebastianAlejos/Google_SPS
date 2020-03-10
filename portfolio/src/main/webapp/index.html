@@ -5,33 +5,55 @@
     <title>My Portfolio: Sebastián Alejos Acosta</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCY1mSu8y2m7QIAwl_BOWGlKVMCHEpdR8Q"></script>
+    <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="#map">Map</a>
+        <a href="#links">Relevant Links</a>
+        <a href="#comments-container">Comment</a>
+    </div>
   </head>
-  <body>
-    <div id="content">
+  <body onload="start();">
+    <div id="home">
       <h1>Sebastián Alejos Acosta</h1>
       <p>This is my portfolio.</p>
+    </div>
+    <div id="content">
       <p>Click here for random facts about me!</p>
       <button onclick="addRandomFacts()">Random fact generator</button>
       <div id="fact-container"></div>
-      <div id="content">
-      <h1>Server Stats</h1>
-      <p>Click here to see comments:</p>
-      <button onclick="getComments()">Fetch comments!</button>
-      <ul id="comments-container"></ul>
-    </div>
       <p> I study at Tecnologico de Monterrey in Guadalajara! Welcome to my portfolio!</p>
       <p> Here is a picture of me and my dog Kyra! She is 3 months old!</p>
-    </div>
-    <div id ="image">
-         <img src="images/kyra.jpg" alt="Kyra and me" style="width:600px; height:500px;" class="rotateimg90"/>
-    </div>
-    <div id="content">
-        <p> I am a sophmore, studying Computer Science. I love sports! I play soccer, tennis, I run, and I enjoy hiking with kyra!</p>
-        <h2>Relevant links:</h2>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/sebastian-alejos-445337178" target="_top">Click here!</a></p>
-        <p>Github: <a href="https://github.com/SebastianAlejos" target="_top">Click here!</a></p>
-        <p>Instagram: @bastialejos</p>
-        <p>Twitter: @bastialejos</p>
+      <div id ="image">
+        <img src="images/kyra.jpg" alt="Kyra and me" style="width:600px; height:500px;" class="rotateimg90"/>
+      </div>
+      <p> I am a sophmore, studying Computer Science. I love sports! I play soccer, tennis, I run, and I enjoy hiking with kyra!</p>
+    </div>   
+    <h1>Where I have lived:</h1>
+        <div id="map"></div>
+    <div id="links">
+        <h3>Relevant links:</h3>
+        <a href="https://www.linkedin.com/in/sebastian-alejos-445337178" target="_top">
+        <img src="images/linkedin.png"  style="width:35px;height:35px;border:0;">
+        </a>
+        <a href="https://github.com/SebastianAlejos" target="_top">
+        <img src="images/github.png"  style="width:35px;height:35px;border:0;">
+        </a>
+        <a href="https://www.instagram.com/bastialejos/" target="_top">
+        <img src="images/instagram.png"  style="width:35px;height:35px;border:0;">
+        </a>
+        <a href="https://twitter.com/BastiAlejos" target="_top">
+        <img src="images/twitter.png"  style="width:35px;height:35px;border:0;">
+        </a>
         <p> Feel free to follow, connect, etc.</p>
+
+        <form action="/data" method="POST">
+            <h3>Please leave any comments you may have:</h3>
+            <textarea name="comment">Comment here</textarea>
+      <input type="submit" />
+      <h4>Comments:</h4>
+      <ul id="comments-container"></ul>
+    </form>
   </body>
+
 </html>

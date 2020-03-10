@@ -1,7 +1,41 @@
+body{
+    background-image: url("images/black3.jpg");
+    background-repeat: x;
+}
+h1{
+  margin-left: auto;
+  margin-right: auto;
+  width: 650px;
+  margin-top: 70px;
+  color: whitesmoke;
+}
+h2{
+    color: black
+}
+#marker{
+   color: black;
+
+}
+#links{
+  margin-left: auto;
+  margin-right: auto;
+  width: 650px;
+  margin-top: 70px;
+  color: whitesmoke;
+}
+#home{
+  margin-left: auto;
+  margin-right: auto;
+  width: 650px;
+  margin-top: 70px;
+  color: whitesmoke;
+}
 #content {
   margin-left: auto;
   margin-right: auto;
   width: 650px;
+  margin-top: 70px;
+  color: whitesmoke;
 }
 
 #greeting-container {
@@ -22,4 +56,46 @@
   -ms-transform: rotate(90deg);
   -o-transform: rotate(90deg);
   transform: rotate(90deg);
+}
+#map {
+  border: thin solid black;
+  height: 500px;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+
+
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+  position: fixed; /* Set the navbar to fixed position */
+  z-index: 9999;
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  margin-bottom: 70px;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #6B8E23;
+  color:whitesmoke;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color:#556B2F;
+  color: white;
 }
